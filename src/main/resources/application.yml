@@ -1,0 +1,25 @@
+server:
+  port: 8098
+
+spring:
+  application:
+    name: wechat-server
+  kafka:
+    producer:
+      bootstrap-servers: 47.103.39.51:9092
+      retries: 0
+      batch-size: 4096
+      buffer-memory: 40960
+    enable: true
+      
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8111/eureka/
+      
+logging:
+  file: logs/${spring.application.name}.log
+
+
+  
